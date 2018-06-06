@@ -13,6 +13,15 @@ const Bodytext = props => {
           animation-name: bodytextEntry;
           animation-duration: ${theme.time.duration.long};
 
+          :global(blockquote) {
+            background: #f9f9f9;
+            border-left: 5px solid #ccc;
+            margin: 1.5em 10px;
+            padding: 0.5em 15px;
+            font-style: italic;
+            color: #343434;
+            font-size: 1.5em;
+          }
           :global(h2),
           :global(h3) {
             margin: 1.5em 0 1em;
@@ -72,6 +81,7 @@ const Bodytext = props => {
             opacity: 1;
           }
         }
+
       `}</style>
     </React.Fragment>
   );
