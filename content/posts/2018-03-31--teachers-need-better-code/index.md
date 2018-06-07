@@ -25,18 +25,17 @@ The problem lies in the fact that teachers receive over a hundred "next things" 
 
 Over 100 Items **x** Every Student = Data Paralysis
 
-[Across business, researchers estimate that up to 73% of collected data is never successfully used.](https://www.forbes.com/sites/tomaslaurinavicius/2017/11/01/risk-too-much-data/#57175cda44b3) Education probably isn't much different. 
-
+[Across business, researchers estimate that up to 73% of collected data is never successfully used.](https://www.forbes.com/sites/tomaslaurinavicius/2017/11/01/risk-too-much-data/#57175cda44b3) Education probably isn't much different.
 
 Also, tests like the NWEA Map provide a *snapshot*, as it's only given 2-3 times a year. Students are learning daily, so with each passing day the data grows stale until, like last year's shoes, it doesn't fit the 2nd grader. 
 
 **This is something that can be remedied through better code.**
 
-Software that quickly maps every bit of student data to the Common Core State Standards would likely be the best solution to the problem. 
+Software that quickly maps every bit of student data to the Common Core State Standards would likely be the best solution to the problem.
 
 The teacher enters Timmy's results from today's math test. The app knows that question #3 is assessing for the following standard:
-> CCSS.MATH.CONTENT.2.NBT.A.1.A
->100 can be thought of as a bundle of ten tens — called a "hundred."
+`CCSS.MATH.CONTENT.2.NBT.A.1.A : 100 can be thought of as a bundle of ten tens — called a "hundred."`
+
 
 It updates Timmy's profile with this new data point. Because Timmy has been tested on this in the past, it combines this data with Timmy's homework and classwork data to get the full profile. The app checks for growth or mastery. It recommends next steps to the teacher.
 
@@ -59,21 +58,23 @@ If the student gets it wrong, a good app will give a detailed breakdown of how t
 Smarter programs would be able to break these mistakes into categories and remediate the student accordingly. It’s a bit of extra leg work, but not too much. Most math programs give the student randomly generated numbers within a certain range, depending on the skill. 
 
 A second grader working on 2 digit plus 2 digit numbers might get the problem `35+58`. The program will calculate the answer and compare the student’s answer against it. 
-<pre><code class="language-python">if student_answer == answer:
+```python
+if student_answer == answer:
 	return True
 else:
 		return False
-</code></pre>
+```
 
 If the student types `93`, great! She’s got it. But there are so many reasons a student might input a different number, and a few extra if statements would catch and quickly remediate those errors.
 
-<pre><code class="language-python">if student_answer == answer:
+```python
+if student_answer == answer:
 	return “Correct!”
 elif student__answer == addend2 - addend1:
 	return “Careful! You subtracted when you should be adding.”
 elif student_answer == (answer+1) or student__answer == (answer-1):
 	return “Careful! You were just one off. Double check your work.”
-</code></pre>
+```
 
 Much of the learning process in math comes when a student compares their incorrect answer to the correct one, has an 💡 “OHHH!” realization, and solidifies some new learning. Unfortunately, left to their own devices, many students would rather get a problem wrong time after time than stop and reflect on why they were wrong and fix it themselves. 
 
