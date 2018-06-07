@@ -55,6 +55,14 @@ const Contact = props => {
 
   return (
     <React.Fragment>
+      <p>
+        If you have <strong>any</strong> questions, comments, or just want to say hey, please reach out!
+        </p>
+      <p>
+        I know forms like these often feel pretty formal and stuffy, but don't let that stop you.
+      </p>
+      <p>Go on, say hey!</p>
+      <br />
       <div className="form">
         <ThemeContext.Consumer>
           {theme => (
@@ -73,7 +81,7 @@ const Contact = props => {
                   rules: [
                     {
                       required: true,
-                      message: "Please input your e-mail address!",
+                      message: "Please input a valid e-mail address!",
                       whitespace: true,
                       type: "email"
                     }
@@ -83,11 +91,11 @@ const Contact = props => {
               <FormItem label="Message">
                 {getFieldDecorator("message", {
                   rules: [
-                    { required: true, message: "Please input your message!", whitespace: true }
+                    { required: true, message: "Please input a message!", whitespace: true }
                   ]
                 })(
                   <TextArea
-                    placeholder="Autosize height with minimum and maximum number of lines"
+                    placeholder="Your message goes here. I'm already excited to see what you'll type here."
                     autosize={{ minRows: 4, maxRows: 10 }}
                   />
                 )}
