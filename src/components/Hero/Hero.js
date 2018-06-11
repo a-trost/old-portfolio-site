@@ -9,7 +9,9 @@ const Hero = props => {
   return (
     <React.Fragment>
       <section className="hero">
-        <h1>Solving problems with code and design</h1>
+        <h1>Hey, I'm Alex</h1>
+        <h2>Developer, Designer, Teacher</h2>
+        <h3>NEW HAVEN, CT</h3>
         <button onClick={scrollToContent} aria-label="scroll">
           <FaArrowDown />
         </button>
@@ -30,6 +32,38 @@ const Hero = props => {
           height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
+        }
+        
+        h2 {
+          text-align: center;
+          font-size: ${theme.hero.h2.size};
+          margin: ${theme.space.stack.l};
+          color: ${theme.hero.h2.color};
+          line-height: ${theme.hero.h2.lineHeight};
+          text-remove-gap: both 0 "Open Sans";
+
+          :global(span) {
+            position: relative;
+
+            &::after,
+            &::before {
+              content: "›";
+              color: ${theme.text.color.attention};
+              margin: 0 ${theme.space.xs} 0 0;
+              text-shadow: 0 0 ${theme.space.s} ${theme.color.neutral.gray.k};
+            }
+            &::after {
+              content: "‹";
+              margin: 0 0 0 ${theme.space.xs};
+            }}
+        }
+        h3 {
+          text-align: center;
+          font-size: ${theme.hero.h3.size};
+          margin: ${theme.space.stack.m};
+          color: ${theme.hero.h3.color};
+          line-height: ${theme.hero.h3.lineHeight};
+          text-remove-gap: both 0 "Open Sans";
         }
 
         h1 {
