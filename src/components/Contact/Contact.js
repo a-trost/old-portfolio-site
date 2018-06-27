@@ -73,6 +73,7 @@ const Contact = props => {
               data-netlify-honeypot="bot-field"
               name="contact-form"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <FormItem label="Name" name="name">
                 {getFieldDecorator("name", {
                   rules: [
