@@ -10,8 +10,8 @@ Various projects I've worked on with code, design or otherwise.
 ____________
 <div id="alexandria"></div>  
 
-# Dogger
-![Dogger - A JavaScript Arcade Game - Screenshots](./game-screenshots.png)
+# Alexandria
+![Alexandria - A book tracking app - Screenshots](./alexandria.png)
 A book tracking app that allows users to search for books and add them to lists of "Read", "Reading", or "Want to Read." 
 Progressive web app, responsive design, and interacts with a Udacity API that provides a limited number of books.
 [Try the App](https://alexandria.atrost.com/)   -    [Check the Code](https://github.com/a-trost/alexandria)
