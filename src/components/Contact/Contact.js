@@ -56,8 +56,9 @@ const Contact = props => {
   return (
     <React.Fragment>
       <p>
-        If you have <strong>any</strong> questions, comments, or just want to say hey, please reach out!
-        </p>
+        If you have <strong>any</strong> questions, comments, or just want to say hey, please reach
+        out!
+      </p>
       <p>
         I know forms like these often feel pretty formal and stuffy, but don't let that stop you.
       </p>
@@ -66,8 +67,13 @@ const Contact = props => {
       <div className="form">
         <ThemeContext.Consumer>
           {theme => (
-            <Form onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field">
-              <FormItem label="Name">
+            <Form
+              onSubmit={handleSubmit}
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              name="contact-form"
+            >
+              <FormItem label="Name" name="name">
                 {getFieldDecorator("name", {
                   rules: [
                     {
@@ -76,7 +82,7 @@ const Contact = props => {
                   ]
                 })(<Input />)}
               </FormItem>
-              <FormItem label="E-mail">
+              <FormItem label="E-mail" name="email">
                 {getFieldDecorator("email", {
                   rules: [
                     {
@@ -88,14 +94,12 @@ const Contact = props => {
                   ]
                 })(<Input />)}
               </FormItem>
-              <FormItem label="Message">
+              <FormItem label="Message" name="message">
                 {getFieldDecorator("message", {
-                  rules: [
-                    { required: true, message: "Please input a message!", whitespace: true }
-                  ]
+                  rules: [{ required: true, message: "Please input a message!", whitespace: true }]
                 })(
                   <TextArea
-                    placeholder="Your message goes here. I'm already excited to see what you'll type here."
+                    placeholder="Your message goes here. I'm already excited to see what you'll say."
                     autosize={{ minRows: 4, maxRows: 10 }}
                   />
                 )}
