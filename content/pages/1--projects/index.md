@@ -4,8 +4,24 @@ menuTitle: Projects
 ---
 
 Various projects I've worked on with code, design or otherwise.
+* [Alexandria](#alexandria)
 * [Dogger](#dogger)
 * [Match Up](#matchup)
+____________
+<div id="alexandria"></div>  
+
+# Dogger
+![Dogger - A JavaScript Arcade Game - Screenshots](./game-screenshots.png)
+A book tracking app that allows users to search for books and add them to lists of "Read", "Reading", or "Want to Read." 
+Progressive web app, responsive design, and interacts with a Udacity API that provides a limited number of books.
+[Try the App](https://alexandria.atrost.com/)   -    [Check the Code](https://github.com/a-trost/alexandria)
+#### Tools Used
+ * React
+ * React Router
+ * Javascript
+ * Material-UI
+ * Git
+ * Netlify
 ____________
 <div id="dogger"></div>  
 
